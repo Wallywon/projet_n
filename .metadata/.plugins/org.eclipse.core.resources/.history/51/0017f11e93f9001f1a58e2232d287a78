@@ -1,0 +1,88 @@
+package com.parser.service;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.InsertManyResult;
+import com.parser.model.Student;
+
+import org.bson.Document;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DatabaseService {
+    
+    private static final String CONNECTION_STRING = "mongodb://localhost:27017"; // Change this for Docker if needed
+    private static final String DATABASE_NAME = "student_db";
+    private static final String COLLECTION_NAME = "students";
+    
+    private MongoClient mongoClient;
+    
+    public DatabaseService() {
+        mongoClient = MongoClients.create(CONNECTION_STRING);
+    }
+    
+    public boolean saveStudents(List<Student> students) {
+        try {
+            MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
+            MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
+            
+            List<Document> documents = new ArrayList<>();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            
+            for (Student student : students) {
+                Document document = new Document();
+                document.append("firstName", student.getFirstName())
+                       .append("lastName", student.getLastName())
+                       .append("studentNumber", student.getStudentNumber());
+                
+                if (student.getBirthDate() != null) {
+                    document.append("birthDate", student.getBirthDate());
+                }
+                
+                documents.add(document);
+            }
+            
+            if (!documents.isEmpty()) {
+                InsertManyResult result = collection.insertMany(documents);
+                return result.wasAcknowledged();
+            }
+            
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    public List<Student> getAllStudents() {
+        List<Student> students = new ArrayList<>();
+        
+        try {
+            MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
+            MongoCollection<Document> collection = database.getCollection(COLLECTION_NAME);
+            
+            for (Document doc : collection.find()) {
+                Student student = new Student();
+                student.setFirstName(doc.getString("firstName"));
+                student.setLastName(doc.getString("lastName"));
+                student.setStudentNumber(doc.getString("studentNumber"));
+                student.setBirthDate(doc.getDate("birthDate"));
+                students.add(student);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return students;
+    }
+    
+    public void close() {
+        if (mongoClient != null) {
+            mongoClient.close();
+        }
+    }
+}

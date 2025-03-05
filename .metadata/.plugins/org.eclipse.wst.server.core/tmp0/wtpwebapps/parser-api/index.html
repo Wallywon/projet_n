@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Data Parser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="file"] {
+            padding: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Data Parser</h1>
+        <p>Upload an Excel file containing student data to parse and store in the database.</p>
+        
+        <form action="upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="excelFile">Select Excel File:</label>
+                <input type="file" name="excelFile" id="excelFile" accept=".xlsx,.xls" required>
+            </div>
+            <button type="submit">Upload and Parse</button>
+        </form>
+        
+        <div class="links">
+            <a href="upload">View All Students</a>
+        </div>
+    </div>
+</body>
+</html>

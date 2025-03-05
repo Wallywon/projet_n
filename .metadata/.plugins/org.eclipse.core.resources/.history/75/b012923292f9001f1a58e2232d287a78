@@ -1,0 +1,5 @@
+package com.parser.model;
+
+public class Student {
+
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+H:\eclypse_workplace_sysinf_projet_n\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1739035045.index
+\parser-api\src\main\java

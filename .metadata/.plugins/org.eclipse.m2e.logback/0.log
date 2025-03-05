@@ -1,0 +1,111 @@
+2025-02-25 15:09:38,753 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-02-25 15:26:00,570 [ModalContext] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't write workspace state
+java.io.IOException: Espace insuffisant sur le disque
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:349)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.flush(ObjectOutputStream.java:1832)
+	at java.base/java.io.ObjectOutputStream.flush(ObjectOutputStream.java:724)
+	at java.base/java.io.ObjectOutputStream.close(ObjectOutputStream.java:745)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.writeWorkspaceState(ProjectRegistryReader.java:120)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.writeWorkspaceState(ProjectRegistryManager.java:1045)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.saving(ProjectRegistryManager.java:1196)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:453)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:269)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:272)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1226)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2494)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:553)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+2025-02-26 10:14:58,819 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-05 08:12:49,856 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-05 08:18:17,345 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: parser-api:parser-api:0.0.1-SNAPSHOT @ H:\eclypse_workplace_sysinf_projet_n\parser-api\pom.xml.
+2025-03-05 08:18:19,716 [Worker-2: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:19,741 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\java to target\classes
+2025-03-05 08:18:19,769 [Worker-2: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:19,785 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:18:20,193 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parser-api/src/main/java
+2025-03-05 08:18:20,195 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Resources folder /parser-api/src/main/java overlaps with sources folder /parser-api/src/main/java
+2025-03-05 08:18:20,197 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parser-api/src/test/java
+2025-03-05 08:18:20,197 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /parser-api/src/test/resources
+2025-03-05 08:18:21,267 [Worker-8: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:21,276 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\java to target\classes
+2025-03-05 08:18:21,296 [Worker-8: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:21,300 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:18:21,852 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-05 08:18:22,064 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: parser-api:parser-api:0.0.1-SNAPSHOT @ H:\eclypse_workplace_sysinf_projet_n\parser-api\pom.xml.
+2025-03-05 08:18:22,567 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parser-api/src/main/java
+2025-03-05 08:18:22,569 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Resources folder /parser-api/src/main/java overlaps with sources folder /parser-api/src/main/java
+2025-03-05 08:18:22,575 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parser-api/src/test/java
+2025-03-05 08:18:22,577 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /parser-api/src/test/resources
+2025-03-05 08:18:22,954 [Worker-12: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:22,959 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\java to target\classes
+2025-03-05 08:18:22,993 [Worker-12: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:22,997 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:18:22,998 [Worker-12: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of parser-api
+2025-03-05 08:18:23,000 [Worker-12: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for parser-api
+2025-03-05 08:18:23,894 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for parser-api
+2025-03-05 08:18:23,986 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 1,00 sec 
+2025-03-05 08:18:24,456 [Worker-3: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:24,470 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\java to target\classes
+2025-03-05 08:18:24,523 [Worker-3: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-03-05 08:18:24,543 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:18:24,544 [Worker-3: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of parser-api
+2025-03-05 08:18:24,545 [Worker-3: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for parser-api
+2025-03-05 08:18:26,715 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.0.0-RC1 is missing, no dependency information available
+2025-03-05 08:18:26,976 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.parser:parser_api:0.0.1-SNAPSHOT @ H:\eclypse_workplace_sysinf_projet_n\parser-api\pom.xml.
+2025-03-05 08:18:27,529 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:18:27,540 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:18:27,543 [Worker-11: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of parser-api
+2025-03-05 08:18:27,546 [Worker-11: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for parser-api
+2025-03-05 08:18:29,120 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-05 08:18:29,346 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.parser:parser_api:0.0.1-SNAPSHOT @ H:\eclypse_workplace_sysinf_projet_n\parser-api\pom.xml.
+2025-03-05 08:18:29,360 [Worker-0: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:jar:3.0.0-RC1 is missing, no dependency information available
+2025-03-05 08:18:29,919 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parser-api/src/main/java
+2025-03-05 08:18:29,920 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /parser-api/src/main/resources
+2025-03-05 08:18:29,920 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /parser-api/src/test/java
+2025-03-05 08:18:29,921 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /parser-api/src/test/resources
+2025-03-05 08:18:31,452 [Worker-0: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for parser-api
+2025-03-05 08:18:31,584 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 1,00 sec 
+2025-03-05 08:18:31,663 [Worker-10: Building Project parser-api] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:18:31,666 [Worker-10: Building Project parser-api] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:18:31,667 [Worker-10: Building Project parser-api] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of parser-api
+2025-03-05 08:18:31,668 [Worker-10: Building Project parser-api] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for parser-api
+2025-03-05 08:19:34,990 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:19:34,996 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:19:39,003 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:19:39,006 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:19:57,733 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:19:57,743 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:20:05,726 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:20:05,730 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:20:17,921 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:20:17,925 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:20:27,752 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:20:27,757 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:21:11,170 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:21:11,178 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:21:17,023 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:21:17,025 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:21:36,959 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:21:36,964 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:21:39,105 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:21:39,110 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:22:00,263 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:22:00,272 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:22:16,892 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:22:16,900 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:22:28,121 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:22:28,132 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:22:35,802 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:22:35,806 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:22:41,386 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:22:41,394 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:22:48,977 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:22:48,982 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:26:14,982 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:26:14,989 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
+2025-03-05 08:28:05,629 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\main\resources
+2025-03-05 08:28:05,649 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory H:\eclypse_workplace_sysinf_projet_n\parser-api\src\test\resources
