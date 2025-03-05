@@ -59,4 +59,32 @@ public class UEController {
                 ? ResponseEntity.ok().build()
                 : ResponseEntity.notFound().build();
     }
+
+    @PostMapping("/{idUe}/register/{numEtudiant}")
+    public ResponseEntity<String> registerStudentToUE(@PathVariable Long idUe, @PathVariable Long numEtudiant) {
+        boolean isRegistered = ueService.registerStudentToUE(idUe, numEtudiant);
+
+        if (!isRegistered) {
+            return ResponseEntity.badRequest().body(
+                    "Impossible d'inscrire l'étudiant : " +
+                            "il doit être inscrit et accepté dans la formation, " +
+                            "ne pas être déjà inscrit à l'UE, et il doit rester de la place."
+            );
+        }
+        return ResponseEntity.ok("Étudiant inscrit à l'UE avec succès !");
+    }
+
+    @DeleteMapping("/{idUe}/unregister/{numEtudiant}")
+    public ResponseEntity<String> unregisterStudentFromUE(@PathVariable Long idUe, @PathVariable Long numEtudiant) {
+        boolean isUnregistered = ueService.unregisterStudentFromUE(idUe, numEtudiant);
+
+        if (!isUnregistered) {
+            return ResponseEntity.badRequest().body(
+                    "Impossible de désinscrire l'étudiant : " +
+                            "il doit être inscrit et accepté dans la formation et être actuellement inscrit à l'UE."
+            );
+        }
+        return ResponseEntity.ok("Étudiant désinscrit de l'UE avec succès !");
+    }
+
 }
