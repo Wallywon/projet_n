@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Manager Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Student Management System</h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#" id="nav-home" class="active">Home</a></li>
+          <li><a href="#" id="nav-students">Student Data</a></li>
+          <li><a href="#" id="nav-messages">Student Messages</a></li>
+          <li><a href="#" id="nav-check">Check Student</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home Page -->
+      <section id="home-section" class="page-section active">
+        <div class="container">
+          <h2>Welcome to Student Management System</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h3>Manage Student Data</h3>
+              <p>Upload Excel files, view students and check student information</p>
+              <button id="goto-students" class="btn primary">Manage Students</button>
+            </div>
+            <div class="feature-card">
+              <h3>Student Messages</h3>
+              <p>View, create, update and delete messages for students</p>
+              <button id="goto-messages" class="btn primary">View Messages</button>
+            </div>
+            <div class="feature-card">
+              <h3>Student Verification</h3>
+              <p>Check if a student exists in the database by student number</p>
+              <button id="goto-check" class="btn primary">Check Student</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Data Page -->
+      <section id="students-section" class="page-section">
+        <div class="container">
+          <h2>Student Data Management</h2>
+          
+          <div class="tab-container">
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="upload-tab">Upload Students</button>
+              <button class="tab-btn" data-tab="list-tab">View Students</button>
+            </div>
+            
+            <div id="upload-tab" class="tab-content active">
+              <div id="upload-message" class="message hidden"></div>
+              <form id="upload-form">
+                <div class="form-group">
+                  <label for="file-input">Select Excel File:</label>
+                  <input type="file" id="file-input" accept=".xlsx,.xls">
+                </div>
+                <button type="submit" id="upload-btn" class="btn primary">Upload and Parse</button>
+              </form>
+              
+              <div id="parsed-students" class="results-container">
+                <h3>Parsed Students</h3>
+                <div class="table-container">
+                  <table id="uploaded-students-table">
+                    <thead>
+                      <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Student Number</th>
+                        <th>Birth Date</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            <div id="list-tab" class="tab-content">
+              <button id="refresh-students" class="btn secondary">Refresh List</button>
+              <div id="list-message" class="message hidden"></div>
+              <div class="table-container">
+                <table id="students-table">
+                  <thead>
+                    <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Student Number</th>
+                      <th>Birth Date</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Messages Page -->
+      <section id="messages-section" class="page-section">
+        <div class="container">
+          <h2>Student Messages</h2>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="message-student-id">Student Number:</label>
+              <input type="text" id="message-student-id" placeholder="Enter student number">
+            </div>
+            <button id="fetch-messages" class="btn primary">Fetch Messages</button>
+          </div>
+          
+          <div id="message-list" class="results-container">
+            <h3>Messages</h3>
+            <div id="messages-message" class="message hidden"></div>
+            <div class="message-controls">
+              <button id="new-message-btn" class="btn secondary">New Message</button>
+            </div>
+            <div class="table-container">
+              <table id="messages-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Text</th>
+                    <th>Read</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div id="message-form" class="form-container hidden">
+            <h3 id="message-form-title">New Message</h3>
+            <form id="message-edit-form">
+              <input type="hidden" id="message-id">
+              <div class="form-group">
+                <label for="message-student">Student Number:</label>
+                <input type="text" id="message-student" required>
+              </div>
+              <div class="form-group">
+                <label for="message-text">Message:</label>
+                <textarea id="message-text" required></textarea>
+              </div>
+              <div class="form-group checkbox">
+                <input type="checkbox" id="message-read">
+                <label for="message-read">Marked as Read</label>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn primary">Save Message</button>
+                <button type="button" id="cancel-message" class="btn secondary">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Check Student Page -->
+      <section id="check-section" class="page-section">
+        <div class="container">
+          <h2>Check Student Existence</h2>
+          
+          <div class="form-container">
+            <div class="form-group">
+              <label for="check-student-number">Student Number:</label>
+              <input type="text" id="check-student-number" placeholder="Enter student number to check">
+            </div>
+            <button id="check-student-btn" class="btn primary">Check Student</button>
+          </div>
+          
+          <div id="check-result" class="hidden">
+            <div id="check-message" class="message"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Student Management System</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
