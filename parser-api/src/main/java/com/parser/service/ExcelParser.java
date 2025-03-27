@@ -22,9 +22,8 @@ public class ExcelParser {
         List<Student> students = new ArrayList<>();
         
         try (Workbook workbook = new XSSFWorkbook(excelFile)) {
-            Sheet sheet = workbook.getSheetAt(0); // Assuming data is in the first sheet
+            Sheet sheet = workbook.getSheetAt(0);
             
-            // Skip header row if present
             int startRow = sheet.getFirstRowNum() + 1;
             int endRow = sheet.getLastRowNum();
             
