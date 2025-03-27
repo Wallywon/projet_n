@@ -17,9 +17,9 @@ import com.parser.service.ExcelParser;
 
 @WebServlet("/upload")
 @MultipartConfig(
-    fileSizeThreshold = 1024 * 1024, // 1 MB
-    maxFileSize = 1024 * 1024 * 10,  // 10 MB
-    maxRequestSize = 1024 * 1024 * 50 // 50 MB
+    fileSizeThreshold = 1024 * 1024,
+    maxFileSize = 1024 * 1024 * 10,  
+    maxRequestSize = 1024 * 1024 * 50 
 )
 public class FileUploadServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -38,14 +38,11 @@ public class FileUploadServlet extends HttpServlet {
             throws ServletException, IOException {
         
         try {
-            // Get the uploaded file
             Part filePart = request.getPart("excelFile");
             
             if (filePart != null) {
-                // Parse students from the Excel file
                 List<Student> students = excelParser.parseStudentsFromExcel(filePart.getInputStream());
                 
-                // Save students to database
                 boolean success = databaseService.saveStudents(students);
                 
                 if (success) {
@@ -62,7 +59,6 @@ public class FileUploadServlet extends HttpServlet {
             e.printStackTrace();
         }
         
-        // Forward to result page
         request.getRequestDispatcher("/result.jsp").forward(request, response);
     }
     
@@ -70,7 +66,6 @@ public class FileUploadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         
-        // Display all students from the database
         List<Student> students = databaseService.getAllStudents();
         request.setAttribute("students", students);
         request.getRequestDispatcher("/viewStudents.jsp").forward(request, response);
